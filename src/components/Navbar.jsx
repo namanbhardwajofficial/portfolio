@@ -21,7 +21,7 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt="logo" className="w-10 h-12 object-contain" />
-          <p className="text-white text-[18px] font-bold cursor-pointer">
+          <p className="text-white flex text-[18px] font-bold cursor-pointer">
             Naman Bhardwaj
           </p>
         </Link>
@@ -31,8 +31,11 @@ const Navbar = () => {
               key={link.id}
               className={`${
                 active === link.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(link.title)}
+              } font-poppins font-medium cursor-pointer text-[16px]`}
+              onClick={() => {
+                setToggle(!toggle);
+                setActive(link.title);
+              }}
             >
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
@@ -57,7 +60,10 @@ const Navbar = () => {
                   className={`${
                     active === link.title ? "text-white" : "text-secondary"
                   } hover:text-white text-[18px] font-medium cursor-pointer`}
-                  onClick={() => setActive(link.title)}
+                  onClick={() => {
+                    setToggle(!toggle);
+                    setActive(link.title);
+                  }}
                 >
                   <a href={`#${link.id}`}>{link.title}</a>
                 </li>
