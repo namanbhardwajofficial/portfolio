@@ -8,6 +8,7 @@
   "type": "commonjs",
   "main": "assests/js/main.js",
   "scripts": {
-    "start": "live-server"
+    "start": "live-server",
+    "build": "echo 'No build required'"
   }
 }
