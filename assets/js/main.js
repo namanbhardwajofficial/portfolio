@@ -2,19 +2,22 @@
 const body = document.querySelector("body"),
   toggleSwitch = document.getElementById("toggle-switch");
 
-toggleSwitch.addEventListener("click", () => {
-  body.classList.toggle("dark");
-});
+if (toggleSwitch && body) {
+  toggleSwitch.addEventListener("click", () => {
+    body.classList.toggle("dark");
+  });
+}
 
 // Where User clicks on the menu button - open Menu
 
 function myMenuFunction() {
   var navMenu = document.getElementById("navMenu");
-
-  if (navMenu.className === "nav_menu") {
-    navMenu.className += " responsive";
-  } else {
-    navMenu.className = "nav_menu";
+  if (navMenu) {
+    if (navMenu.className === "nav_menu") {
+      navMenu.className += " responsive";
+    } else {
+      navMenu.className = "nav_menu";
+    }
   }
 }
 
@@ -22,8 +25,7 @@ function myMenuFunction() {
 
 function menuClose() {
   var navMenu = document.getElementById("navMenu");
-
-  navMenu.className = "nav_menu";
+  if (navMenu) navMenu.className = "nav_menu";
 }
 
 // Modal box must be shown on small devices only - not on desktop or large viewport
@@ -45,6 +47,7 @@ function handleMediaQueryChange(event) {
   if (event.matches) {
     // Open the modal when user clicks the link
     for (var i = 0; i < btn.length; i++) {
+      // @ts-ignore
       btn[i].onclick = function (e) {
         e.preventDefault();
         var modal = document.querySelector(e.target.getAttribute("href"));
@@ -53,9 +56,12 @@ function handleMediaQueryChange(event) {
     }
     // Close the modal when user clicks the close btn
     for (var i = 0; i < closeBtn.length; i++) {
+      // @ts-ignore
       closeBtn[i].onclick = function () {
         for (var index in modals) {
+          // @ts-ignore
           if (typeof modals[index].style !== "undefined") {
+            // @ts-ignore
             modals[index].style.display = "none";
           }
         }
@@ -66,7 +72,9 @@ function handleMediaQueryChange(event) {
     window.onclick = function (event) {
       if (event.target.classList.contains("modal")) {
         for (var index in modals) {
+          // @ts-ignore
           if (typeof modals[index].style !== "undefined") {
+            // @ts-ignore
             modals[index].style.display = "none";
           }
         }
@@ -74,6 +82,7 @@ function handleMediaQueryChange(event) {
     };
   } else {
     for (var i = 0; i < btn.length; i++) {
+      // @ts-ignore
       btn[i].onclick = function (e) {
         e.preventDefault();
         var modal = document.querySelector(e.target.getAttribute("href"));
@@ -94,6 +103,7 @@ const navLink = document.querySelectorAll(".link");
 function linkAction() {
   const navMenu = document.getElementById("navMenu");
 
+  // @ts-ignore
   navMenu.classList.remove("responsive");
 }
 
