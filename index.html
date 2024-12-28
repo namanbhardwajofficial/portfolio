@@ -11,11 +11,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
-      rel="shortcut icon"
-      href="assets/img/favicon.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="assets/img/Nicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
@@ -45,7 +41,7 @@
       <div class="modal-content">
         <span class="close"><i class="fa fa-times"></i></span>
         <div class="content-title">
-          <span>Contributions I have made so far!</span>
+          <span></span>
         </div>
         <div class="desc_content">
           <p>I work together with my team to offer best services in:</p>
@@ -65,7 +61,7 @@
         <div class="content-title">
           <span>About Me</span>
         </div>
-        <p>
+        <p style="text-align: justify">
           I am skilled in JavaScript, React, Node.js, and GraphQL, which are
           powerful tools for building modern web applications. With JavaScript,
           I create interactive and dynamic features; with React, I build
@@ -122,12 +118,15 @@
               </li>
               <li class="list">
                 <a href="#myModal1" class="link" id="myBtn"
-                  >Contributions <i class="fa-solid fa-caret-down"></i
+                  >Work Experience <i class="fa-solid fa-caret-down"></i
                 ></a>
                 <div class="description_box">
                   <div class="link_description" id="myDescription">
                     <div class="content-title">
-                      <span>Service We Offer</span>
+                      <span
+                        >I have worked previously in TCS and now working in
+                        Moonraft Innovation Labs</span
+                      >
                     </div>
                     <div class="desc_content">
                       <p>
@@ -153,15 +152,17 @@
                       <span>About Me</span>
                     </div>
                     <div class="desc_content">
-                      <p>
-                        I am a skilled and creative frontend web developer with
-                        a passion for crafting engaging and user-friendly web
-                        interfaces. My expertise lies in transforming design
-                        concepts into responsive and visually appealing websites
-                        and web applications. With a strong foundation in HTML,
-                        CSS, and JavaScript, I excel at implementing responsive
-                        design, optimizing performance, and ensuring
-                        cross-browser compatibility
+                      <p style="text-align: justify">
+                        I am skilled in JavaScript, React, Node.js, and GraphQL,
+                        which are powerful tools for building modern web
+                        applications. With JavaScript, I create interactive and
+                        dynamic features; with React, I build user-friendly
+                        interfaces; with Node.js, I handle backend development;
+                        and with GraphQL, I design efficient APIs. My ability to
+                        combine these technologies allows me to deliver
+                        high-quality, scalable, and user-focused applications. I
+                        continuously learn and improve, which makes me confident
+                        in becoming one of the best developers in the industry.
                       </p>
                     </div>
                   </div>
@@ -244,7 +245,13 @@
                 </p>
               </div>
               <div class="hero_btn">
-                <button class="btn_1">Hire Me</button>
+                <button
+                  class="btn_1"
+                  onclick="window.location.href='mailto:namanbhardwaj.official@gmail.com?subject=Hiring%20Inquiry';"
+                >
+                  Hire Me
+                </button>
+
                 <button class="btn_2">
                   <a href="assets/pdf/download.pdf" download>Download CV</a>
                 </button>
@@ -256,22 +263,22 @@
               <img src="assets/img/circle.png" alt="" />
             </div>
             <div class="hero-image">
-              <img src="assets/img/1.png" alt="" />
+              <img src="assets/img/naman.png" alt="" />
             </div>
             <!-- <div class="clients">
-              <i class="fa-regular fa-user"></i>
-              <div class="clients-content">
-                <span>2k +</span>
-                <p>Happy Clients</p>
-              </div>
-            </div> -->
-            <div class="experience">
               <i class="fa-regular fa-star"></i>
               <div class="xp-content">
                 <span>5 +</span>
                 <p>Years of experience</p>
               </div>
-            </div>
+            </div> -->
+            <!-- <div class="experience">
+              <i class="fa-regular fa-star"></i>
+              <div class="xp-content">
+                <span>5 +</span>
+                <p>Years of experience</p>
+              </div>
+            </div> -->
           </div>
         </div>
       </main>
@@ -281,11 +288,7 @@
     <script>
       // Types JS
       var typingEffect = new Typed(".multiText", {
-        strings: [
-          "Front End Developer",
-          "Back End Developer",
-          " Full Stack Developer",
-        ],
+        strings: ["Developer", "Engineer"],
         loop: true,
         typeSpeed: 100,
         backSpeed: 80,

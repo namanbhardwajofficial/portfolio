@@ -367,7 +367,7 @@ body.dark #moon {
 }
 .hero-image img {
   position: absolute;
-  right: 250px;
+  right: 0px;
   bottom: 0;
   width: 350px;
 }
